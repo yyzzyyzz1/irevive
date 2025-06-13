@@ -22,12 +22,19 @@ class _DeviceInfoScreenState extends State<DeviceInfoScreen> {
   }
 
   Future<void> _loadInfo() async {
-    var info = await _deviceInfo.deviceInfo;
-    var battery = await _battery.batteryLevel;
-    setState(() {
-      _deviceData = info.data.toString();
-      _batteryLevel = '$battery%';
-    });
+    try {
+      final info = await _deviceInfo.deviceInfo;
+      final battery = await _battery.batteryLevel;
+      setState(() {
+        _deviceData = info.data.toString();
+        _batteryLevel = '$battery%';
+      });
+    } catch (e) {
+      setState(() {
+        _deviceData = 'Failed to load device info: $e';
+        _batteryLevel = 'Unknown';
+      });
+    }
   }
 
   @override
