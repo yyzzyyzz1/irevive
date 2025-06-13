@@ -1,0 +1,22 @@
+name: irevive
+description: Cross-platform smartphone diagnostics app.
+publish_to: 'none'
+
+version: 0.1.0
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  device_info_plus: ^8.0.0
+  battery_plus: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

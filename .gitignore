@@ -1,0 +1,10 @@
+# Flutter build outputs
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+
+# Python test cache
+.pytest_cache/
